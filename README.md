@@ -2,14 +2,17 @@
 Data protection technology
 ### CIA
 Confidentiality 
+</br>
 Integrity
+</br>
 Availability
+
 ### The 3 meanings of privacy
-Privacy as confidentiality:disclosure of information is prevented,or in a way that cannot be linked back to the individual.
+*Privacy as confidentiality*:disclosure of information is prevented,or in a way that cannot be linked back to the individual.
 </br>
-Privacy as control:providing individuals with means to control the disclosure of their information.
+_Privacy as control_:providing individuals with means to control the disclosure of their information.
 </br>
-Privacy as practie:transparency
+*Privacy as practie*:transparency
 (privacy as practice was not applied as users did not have information about how secure the data storage was)
 </br>
 ### A taxonomy of data privacy-4 dimensions
@@ -21,7 +24,7 @@ Granularity: Specific
 </br>
 Retention
 ### Techniques to support privacy
-Privacy design strategies:Minimize(less data collected);Hide(encryption);Inform(Inform data subjects);Control(access control
+*Privacy design strategies*:Minimize(less data collected);Hide(encryption);Inform(Inform data subjects);Control(access control)
 </br>
 System design: Use of dummies; Anonymous&pseudonymity
 ### Adversary types
@@ -39,6 +42,7 @@ Static;Adaptive
 such metrics describe protection against a given type pf adversary.Different adversary types may require different metrics
 #### who can calculate the metrics
 defender, attacker, all-knowing entity
+</br>
 If metric depends on the ground truth,attacker may not be able to compute it;
 If metric depends on the attacker's findings, defender may not be able to compute it;
 
@@ -48,13 +52,13 @@ If metric depends on the attacker's findings, defender may not be able to comput
 the relation between anonymity set size and k-annymity:k=anonymity set size.
 ##### Entropy
 the closer the entropy to  1,the higher the entropy, the more "random" the data
-This metric is calculated by the data holder to understand the uncertainty of the information that may be obtained by an attacker.
+This metric is calculated by the *data holder* to understand the uncertainty of the information that may be obtained by an attacker.
 #### Metrics based on information gain
 
 ##### Amount of the leaked information
 ##### Relative entropy
 metrics measuring the distance between the distribution found by the adversary and the real distribution.
-Obly an omnipotent entity can claculate this.The ground truth of the real distribution is necessary to calculate it.
+Obly an *omnipotent entity* can claculate this.The ground truth of the real distribution is necessary to calculate it.
 
 #### Data similarity metrics
 metrics measuring the privacy provided by a dataset, without an explicit adversary.
@@ -68,7 +72,7 @@ metrics measuring how wrong the adversary's findings are
 </br>
 
 ### Beaver's multiplication protocol(2PC)
-Beaver triples are generated during the preprocessing phase. 
+Beaver triples are generated during the preprocessing phase. (Using OT,Beaver triple can be generated)
 </br>
 <img width="515" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/73fd742c-f3f3-40c8-a735-c616c7b67351">
 </br>
@@ -106,7 +110,7 @@ oblivious transfer is efficient only when the function has constant size.
 <img width="643" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/f885217f-fe6f-4a6b-a3ae-e77d51370eaa">
 
 ### Goldreich-Micali-Wigderson (GMW)
-sepcial case of additive secret sharing
+sepcial case of additive secret sharing,using(OT and Boolean sectet sharing)
 compute any function that can be efficiently computed.
 <img width="544" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/2e2751cb-70b4-4aa4-a827-a0b422463393">
 </br>
