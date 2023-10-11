@@ -64,7 +64,13 @@ Obly an *omnipotent entity* can claculate this.The ground truth of the real dist
 metrics measuring the privacy provided by a dataset, without an explicit adversary.
 ##### k-anonymity
 disregards several aspects:re-release after a change
-
+</br>
+can not prevent attribute disclosure
+</br>
+*attacks on k-anonymity*: 
+homogeneity attack;
+</br>
+background knowledge attack
 #### Error-based metrics
 metrics measuring how wrong the adversary's findings are
 ##### Adversary's expected estimation error
@@ -126,3 +132,26 @@ compute any function that can be efficiently computed.
 </br>
 Instead of garbling a single gate, we are going to garble the whole circuit representation of f. How
 do we garble f?
+
+### Possible disclosure formats
+*Disclosing only a set of previously determined aggregates*
+*Allowing specific queries to the database*
+*Disclosing microdata*
+#### quasi-identifiers
+attributes whose values when taken together can potentially identify an individual.
+### l-diversity
+*Skewness attack*:l-diversity disregards the skewness of the overall distribution
+</br>
+*Similarity attack*:l-diversity disregards the semantic similarity among attribute values
+#### distinct l-diversity
+
+No protection against probabilistic inference
+</br> 
+#### Entropy l-diversity
+
+#### Recursive l-diversity
+
+### t-closeness:privacy beyond k-anonymity and l-diversity
+the distance between the two distribution should be no more than a threshold t.
+#### Earth mover distance
+
