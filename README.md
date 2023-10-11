@@ -65,3 +65,24 @@ disregards several aspects:re-release after a change
 metrics measuring how wrong the adversary's findings are
 ##### Adversary's expected estimation error
 <img width="759" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/5443efa4-6364-4fa6-956e-6d22f88da290">
+</br>
+
+### Beaver's multiplication protocol(2PC)
+Beaver triples are generated during the preprocessing phase. 
+</br>
+<img width="515" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/73fd742c-f3f3-40c8-a735-c616c7b67351">
+</br>
+<img width="508" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/7db9803a-fab5-4ac8-b819-162e5ee532d1">
+</br>
+
+### shamir secrect sharing 
+
+<img width="476" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/8fee5dce-cef6-4f0e-b9f2-556de2381724">
+
+</br>
+<img width="459" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/f29de629-ef20-4d93-a30a-e311a1bdc521">
+</br
+<img width="242" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/7b19afa2-861b-42f1-9c2d-ce352844d057">
+
+
+</br>
