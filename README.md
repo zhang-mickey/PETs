@@ -74,8 +74,14 @@ Beaver triples are generated during the preprocessing phase.
 </br>
 <img width="508" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/7db9803a-fab5-4ac8-b819-162e5ee532d1">
 </br>
+### additive secret sharing
+boolean secret sharign
+<img width="574" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/519ec6e4-ff53-4427-86db-74c4dcaaffd4">
+</br>
 
 ### shamir secrect sharing 
+
+
 
 <img width="476" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/8fee5dce-cef6-4f0e-b9f2-556de2381724">
 
@@ -86,3 +92,33 @@ Beaver triples are generated during the preprocessing phase.
 
 
 </br>
+
+### Oblivious transfer
+oblivious transfer is efficient only when the function has constant size.
+<img width="682" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/9668a677-d6f5-448f-8587-43566a57b20c">
+</br>
+
+#### implementation using asymmetric cryptography
+<img width="645" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/0e59e3ef-7cdd-4ef8-86e2-bded8ef51cf7">
+</br>
+
+#### multiplying secret-shared 
+<img width="643" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/f885217f-fe6f-4a6b-a3ae-e77d51370eaa">
+
+### Goldreich-Micali-Wigderson (GMW)
+sepcial case of additive secret sharing
+compute any function that can be efficiently computed.
+<img width="544" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/2e2751cb-70b4-4aa4-a827-a0b422463393">
+</br>
+<img width="570" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/b18b4198-fcaf-4d4a-ad22-19d9586ff6b8">
+
+</br>
+
+
+### Garbled circuits
+<img width="660" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/2ef299e9-4082-4a1c-9692-afc739f4035e">
+</br>
+<img width="644" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/64b90546-b997-44a3-b2cc-7333522ffc0e">
+</br>
+Instead of garbling a single gate, we are going to garble the whole circuit representation of f. How
+do we garble f?
