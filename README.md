@@ -38,6 +38,15 @@ Local;Global
 Internal;External;
 Static;Adaptive
 </br>
+
+### GDPR
+*Controller*: natural or legal person, public authority, agency or other body which, alone or jointly with others, *determines the purposes and means of the processing of personal data*
+</br>
+*Processor*:natural or legal person, public authority, agency or other body which processes personal data on behalf of the controller.
+
+#### GDPR stipulates obligations for controllers
+
+
 ### Privacy metrics(measure the level of data protection)
 such metrics describe protection against a given type pf adversary.Different adversary types may require different metrics
 #### who can calculate the metrics
@@ -86,6 +95,8 @@ metrics measuring how wrong the adversary's findings are
 
 ### Beaver's multiplication protocol(2PC)
 Beaver triples are generated during the preprocessing phase. (Using OT,Beaver triple can be generated)
+<br>
+Beaver triplets can be used in the multiplication of secret-shared numbers.
 </br>
 <img width="515" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/73fd742c-f3f3-40c8-a735-c616c7b67351">
 </br>
@@ -124,15 +135,24 @@ oblivious transfer is efficient only when the function has constant size.
 
 ### Goldreich-Micali-Wigderson (GMW)
 sepcial case of additive secret sharing,using(OT and Boolean sectet sharing)
+</br>
 compute any function that can be efficiently computed.
+</br>
+For some gates, the two parties perform the same steps, for other gates ,they perform different steps.
 <img width="544" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/2e2751cb-70b4-4aa4-a827-a0b422463393">
 </br>
 <img width="570" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/b18b4198-fcaf-4d4a-ad22-19d9586ff6b8">
-
+</br>
+Requires interaction for each AND gate→ potentially large number of communication rounds.
 </br>
 
 
 ### Garbled circuits
+also using OT, but without using additive or Boolean secret-sharing
+</br>
+the roles of the parties are asymmetric
+</br>
+constant number of communication rounds.
 <img width="660" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/2ef299e9-4082-4a1c-9692-afc739f4035e">
 </br>
 <img width="644" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/64b90546-b997-44a3-b2cc-7333522ffc0e">
@@ -170,9 +190,23 @@ No protection against probabilistic inference
 <img width="320" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/f4049521-07b4-4bd9-875e-e7d391e21be6">
 
 </br>
+
 ### t-closeness:privacy beyond k-anonymity and l-diversity
 the distance between the two distribution should be no more than a threshold t.
 #### Earth mover distance
+## access control
+
+### RBAC
+
+### ABAC
+
+## anonymous communication
+### Mix
 
 ### Random walk
 the destination replies are relayed through the same nodes in reverse order.
+
+### DCnet
+#### Dining cryptographers(DC) problem
+
+### Location privacy
