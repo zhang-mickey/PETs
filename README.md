@@ -63,11 +63,18 @@ Obly an *omnipotent entity* can claculate this.The ground truth of the real dist
 #### Data similarity metrics
 metrics measuring the privacy provided by a dataset, without an explicit adversary.
 ##### k-anonymity
+<img width="287" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/04b8c9d2-122b-4a69-911f-dfeb25fb2c99">
+
+</br>
+<img width="335" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/6efbff02-85b7-4091-b235-537cda8bcf25">
+
+</br>
 disregards several aspects:re-release after a change
 </br>
 can not prevent attribute disclosure
 </br>
 *attacks on k-anonymity*: 
+</br>
 homogeneity attack;
 </br>
 background knowledge attack
@@ -140,17 +147,29 @@ do we garble f?
 #### quasi-identifiers
 attributes whose values when taken together can potentially identify an individual.
 ### l-diversity
+<img width="339" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/893496ad-99f6-42f7-a264-3563255c478f">
+
+</br>
 *Skewness attack*:l-diversity disregards the skewness of the overall distribution
 </br>
 *Similarity attack*:l-diversity disregards the semantic similarity among attribute values
 #### distinct l-diversity
-
+ensure there are at
+least l distinct values for the sensitive attribute in each
+equivalence class.
+</br>
 No protection against probabilistic inference
 </br> 
 #### Entropy l-diversity
+<img width="321" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/5fa440cc-cf26-47ea-aa5c-b25e0d61e571">
+
+
+</br>
 
 #### Recursive l-diversity
+<img width="320" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/f4049521-07b4-4bd9-875e-e7d391e21be6">
 
+</br>
 ### t-closeness:privacy beyond k-anonymity and l-diversity
 the distance between the two distribution should be no more than a threshold t.
 #### Earth mover distance
