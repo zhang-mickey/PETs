@@ -174,3 +174,5 @@ No protection against probabilistic inference
 the distance between the two distribution should be no more than a threshold t.
 #### Earth mover distance
 
+### Random walk
+the destination replies are relayed through the same nodes in reverse order.
