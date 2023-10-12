@@ -72,6 +72,8 @@ Obly an *omnipotent entity* can claculate this.The ground truth of the real dist
 #### Data similarity metrics
 metrics measuring the privacy provided by a dataset, without an explicit adversary.
 ##### k-anonymity
+this technique based on generalization will
+reduce data availability
 <img width="287" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/04b8c9d2-122b-4a69-911f-dfeb25fb2c99">
 
 </br>
