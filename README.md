@@ -239,3 +239,16 @@ calculate all possible couplings between the two poly-lines.
 AC, BD, BE
 AC, AD, BE
 ```
+```
+AC = 1, BD = 1, BE = 2
+AC = 1, AD = √2/2, BE = 2
+```
+The Fréchet distance is the smallest of the maximum pairwise distances. In this case, both maxima are two, so the minimum of both is also 2.
+#### Dynamic time wraping
+<img width="485" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/d3ccce9c-41b4-4e26-8c3b-19123eef3ba2">
+
+</br>
+Find the best matching between two discrete signal sequences
+</br>
+dynamic programming to compute DTW distance
+</br>
