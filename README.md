@@ -196,11 +196,19 @@ No protection against probabilistic inference
 ### t-closeness:privacy beyond k-anonymity and l-diversity
 the distance between the two distribution should be no more than a threshold t.
 #### Earth mover distance
+
+## differential privacy
+### ϵ -differential privacy
+### sensitivity
+
 ## access control
 
-### RBAC
-
-### ABAC
+### RBAC（Role-Based Access Control）
+Users can have several roles.
+### ABAC（Attribute-Based Access Control）
+<img width="565" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/85933e86-7fcf-44b0-b02a-bf5f26f7803a">
+</br>
+In theory, you could even give the same person different permissions based on where the person logs in or what the person tries to do on a different day of the week.
 
 ## anonymous communication
 ### Mix
