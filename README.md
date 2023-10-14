@@ -212,3 +212,30 @@ the destination replies are relayed through the same nodes in reverse order.
 #### Dining cryptographers(DC) problem
 
 ### Location privacy
+
+#### Cloaking
+Position replaced with a region
+</br>
+The larger the region. the lower the utility
+</br>
+Number of users in the region determines privacy.
+</br>
+#### Mix zone
+No location tracking within the mix zone
+
+#### Frechet distance
+Distance between two curves
+</br>
+Suppose a man is walking a dog. Assume the man is walking on one curve and the dog on
+another curve. Both can adjust their speeds but are not allowed to move backwards. The Frechet distance of ´
+the two curves is then the minimum length of leash necessary to connect the man and the dog.
+</br>
+<img width="548" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/3d037786-38da-46a2-9986-a0a5e07c19eb">
+</br>
+<img width="372" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/a81a4a99-aeb3-4a70-b81d-761739d579dc">
+</br>
+calculate all possible couplings between the two poly-lines. 
+```
+AC, BD, BE
+AC, AD, BE
+```
