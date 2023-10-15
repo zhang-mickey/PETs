@@ -206,7 +206,17 @@ the distance between the two distribution should be no more than a threshold t.
 
 ## differential privacy
 ### ϵ -differential privacy
+#### Laplace mechanism
+<img width="535" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/576eaed0-489f-4df2-ab4d-1e97c2bc9f66">
+</br>
+
 ### sensitivity
+<img width="570" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/f2689b48-c057-40d6-8f28-2a28cce94116">
+</br>
+
+#### example
+<img width="407" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/c5d6aa42-8dda-438e-86c2-cb9095765b11">
+
 
 ## access control
 
@@ -219,7 +229,11 @@ In theory, you could even give the same person different permissions based on wh
 
 ## anonymous communication
 ### Mix
+A mix collects a given number of incoming messages into a batch, then flushes them out in lexicographic order.
+</br>
 
+### onion routing
+Encryption is done in layers. Alice and server1 exchanges keys and she encrypts her message. Then, Alice and server2 exchanges keys and she encrypts again, creating layers of encryption. Alice then sends the whole layered encrypted message to Bob, and each server will only be decrypt a layer to reveal the address of the other server, which will finally lead to Bob.
 ### Random walk
 the destination replies are relayed through the same nodes in reverse order.
 
@@ -246,6 +260,8 @@ The larger the region. the lower the utility
 </br>
 Number of users in the region determines privacy.
 </br>
+##### Adaptive-interval cloaking
+
 #### Mix zone
 No location tracking within the mix zone
 
