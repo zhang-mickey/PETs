@@ -46,6 +46,13 @@ Static;Adaptive
 
 #### GDPR stipulates obligations for controllers
 
+#### Possible legal bases for processing personal data
+(1) Consent of the data subject
+</br>
+(2)Public interest
+</br>
+(3)Vital interest of the data subject
+</br>
 
 ### Privacy metrics(measure the level of data protection)
 such metrics describe protection against a given type pf adversary.Different adversary types may require different metrics
@@ -62,8 +69,8 @@ the relation between anonymity set size and k-annymity:k=anonymity set size.
 ##### Entropy
 the closer the entropy to  1,the higher the entropy, the more "random" the data
 This metric is calculated by the *data holder* to understand the uncertainty of the information that may be obtained by an attacker.
-#### Metrics based on information gain
 
+#### Metrics based on information gain
 ##### Amount of the leaked information
 ##### Relative entropy
 metrics measuring the distance between the distribution found by the adversary and the real distribution.
@@ -218,6 +225,17 @@ the destination replies are relayed through the same nodes in reverse order.
 
 ### DCnet
 #### Dining cryptographers(DC) problem
+
+### Attacks on machine learning
+
+#### poisoning attack
+#### Evasion attack
+#### Impersonate attack
+#### Inversion attack
+Aim: reconsturct training data
+#### Membership inference attack
+Train several shadow models with similar structure on similar data.
+
 
 ### Location privacy
 
