@@ -219,13 +219,28 @@ the distance between the two distribution should be no more than a threshold t.
 
 
 ## access control
-
+DAC(Discretionary access control)
+</br>
+MAC(Mandatory access control)
+</br>
+*Access control matrix*
+Conceptual representation,not practical as a real implementation.
 ### RBAC（Role-Based Access Control）
 Users can have several roles.
 ### ABAC（Attribute-Based Access Control）
 <img width="565" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/85933e86-7fcf-44b0-b02a-bf5f26f7803a">
 </br>
 In theory, you could even give the same person different permissions based on where the person logs in or what the person tries to do on a different day of the week.
+
+#### Usage Control (A generalization of attribute-based access control)
+
+### Bell-LaPadula scheme
+
+## Policy management
+Policy: a set of access control rules.
+</br>
+Policy languages: XACML
+
 
 ## anonymous communication
 ### Mix
