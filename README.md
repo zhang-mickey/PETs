@@ -84,6 +84,7 @@ metrics measuring the privacy provided by a dataset, without an explicit adversa
 ##### k-anonymity
 this technique based on generalization will
 reduce data availability
+</br>
 <img width="287" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/04b8c9d2-122b-4a69-911f-dfeb25fb2c99">
 
 </br>
@@ -99,9 +100,11 @@ can not prevent attribute disclosure
 homogeneity attack;
 </br>
 background knowledge attack
+
 #### Error-based metrics
 metrics measuring how wrong the adversary's findings are
 ##### Adversary's expected estimation error
+</br>
 <img width="759" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/5443efa4-6364-4fa6-956e-6d22f88da290">
 </br>
 
@@ -171,6 +174,8 @@ constant number of communication rounds.
 </br>
 Instead of garbling a single gate, we are going to garble the whole circuit representation of f. How
 do we garble f?
+#### free-XOR
+For an XOR gate, no garbled table is created.
 
 ### Possible disclosure formats
 *Disclosing only a set of previously determined aggregates*
@@ -249,7 +254,9 @@ Policy languages: XACML
 ### Mix
 A mix collects a given number of incoming messages into a batch, then flushes them out in lexicographic order.
 </br>
+<img width="385" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/7c397423-737e-4cf5-bcf7-47178eaf6810">
 
+</br>
 ### onion routing
 Encryption is done in layers. Alice and server1 exchanges keys and she encrypts her message. Then, Alice and server2 exchanges keys and she encrypts again, creating layers of encryption. Alice then sends the whole layered encrypted message to Bob, and each server will only be decrypt a layer to reveal the address of the other server, which will finally lead to Bob.
 ### Random walk
