@@ -56,6 +56,9 @@ Static;Adaptive
 
 ### Privacy metrics(measure the level of data protection)
 such metrics describe protection against a given type pf adversary.Different adversary types may require different metrics
+<img width="382" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/2e3aa354-510d-45b3-af6d-bb2e0dfd0461">
+
+</br>
 #### who can calculate the metrics
 defender, attacker, all-knowing entity
 </br>
