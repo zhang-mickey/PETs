@@ -249,6 +249,19 @@ Policy: a set of access control rules.
 </br>
 Policy languages: XACML
 
+## TEE
+
+### static TEE solutions
+predefined protected area
+### dynamic TEE soluctions
+protected areas can be defined on the fly
+#### Intel SGX
+Secure enclaves
+</br>
+Enclave content is encrypted
+</br>
+Encryption key is only stored in the CPU
+
 
 ## anonymous communication
 ### Mix
@@ -257,8 +270,10 @@ A mix collects a given number of incoming messages into a batch, then flushes th
 <img width="385" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/7c397423-737e-4cf5-bcf7-47178eaf6810">
 
 </br>
+
 ### onion routing
 Encryption is done in layers. Alice and server1 exchanges keys and she encrypts her message. Then, Alice and server2 exchanges keys and she encrypts again, creating layers of encryption. Alice then sends the whole layered encrypted message to Bob, and each server will only be decrypt a layer to reveal the address of the other server, which will finally lead to Bob.
+
 ### Random walk
 the destination replies are relayed through the same nodes in reverse order.
 
@@ -274,6 +289,13 @@ the destination replies are relayed through the same nodes in reverse order.
 Aim: reconsturct training data
 #### Membership inference attack
 Train several shadow models with similar structure on similar data.
+### Protecting integrity
+#### Reject on Negative Impact(RONI)
+</br>
+The RONI technique can help to reduce the risk of poisoning attacks.
+
+#### Adversarial training
+Include adversarial samples in the training data, with the correct label
 
 
 ### Location privacy
