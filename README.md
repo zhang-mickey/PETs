@@ -209,7 +209,12 @@ No protection against probabilistic inference
 </br>
 
 ### t-closeness:privacy beyond k-anonymity and l-diversity
-the distance between the two distribution should be no more than a threshold t.
+the distance between the two distribution should be no more than a threshold t.  
+
+#### Vatiational distance 
+
+#### Kullback-Leibler distance 
+
 #### Earth mover distance
 
 ## differential privacy
