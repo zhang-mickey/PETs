@@ -8,11 +8,11 @@ Integrity
 Availability
 
 ### The 3 meanings of privacy
-*Privacy as confidentiality*:disclosure of information is prevented,or in a way that cannot be linked back to the individual.
+`Privacy as confidentiality`:disclosure of information is prevented,or in a way that cannot be linked back to the individual.
 </br>
-_Privacy as control_:providing individuals with means to control the disclosure of their information.
+`Privacy as control`:providing individuals with means to control the disclosure of their information.
 </br>
-*Privacy as practie*:transparency
+`Privacy as practie`:transparency
 (privacy as practice was not applied as users did not have information about how secure the data storage was)
 </br>
 ### A taxonomy of data privacy-4 dimensions
@@ -323,12 +323,30 @@ Position replaced with a region
 The larger the region. the lower the utility  
 Number of users in the region determines privacy(anonymity set size).
 </br>
+
+### Location l-diversity
+Users in the cloaking region have at least l semantically different locations.
+
+### Spatiotemporal cloaking
+### Dummy locations
+Adding locations of fake persons
 #### Adaptive-interval cloaking
 The desired degree of anonymity is specified by the parameter kmin, the minimum acceptable anonymity set size.   
 <img width="511" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/3794ad49-50d2-4ad8-bdbd-7d81b05a45a8">
 
 #### Mix zone
-No location tracking within the mix zone
+No location tracking within the mix zone  
+Users are assigned new pseudonyms when leaving the mix zone.  
+### Geo-indistinguishability
+the user's location x is not distinguishable from any other location z within a radius r form x  
+level of distinguishability:l = ε × r
+
+### Distance between positions
+
+#### Euclidean(planar) distance
+
+#### Spherical distance
+### Distance between trajectories
 
 #### Frechet distance
 Distance between two curves
