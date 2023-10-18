@@ -301,7 +301,8 @@ The RONI technique can help to reduce the risk of poisoning attacks.
 
 #### Adversarial training
 Include adversarial samples in the training data, with the correct label
-
+### DPSGD
+If the gradients are not bounded, we’ll make them so ourselves! Let C be the target bound for the maximum gradient norm. For each sample in the batch, we compute its parameter gradient and if its norm is larger than C, we clip the gradient by scaling it down to C. Mission accomplished — all the gradients now are guaranteed to have norm bounded by C, which we naturally call the clipping threshold. 
 
 ### Location privacy
 
