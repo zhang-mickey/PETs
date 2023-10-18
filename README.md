@@ -314,16 +314,18 @@ Include adversarial samples in the training data, with the correct label
 ### DPSGD
 If the gradients are not bounded, we’ll make them so ourselves! Let C be the target bound for the maximum gradient norm. For each sample in the batch, we compute its parameter gradient and if its norm is larger than C, we clip the gradient by scaling it down to C. Mission accomplished — all the gradients now are guaranteed to have norm bounded by C, which we naturally call the clipping threshold. 
 
-### Location privacy
-
-#### Cloaking
-Position replaced with a region
+## Location privacy
+### Location perturbation
+Position d changed to a different value d'  
+The distance(d,d') determines the trade-off between utility and privacy.  
+### Cloaking(Spatial)
+Position replaced with a region  
+The larger the region. the lower the utility  
+Number of users in the region determines privacy(anonymity set size).
 </br>
-The larger the region. the lower the utility
-</br>
-Number of users in the region determines privacy.
-</br>
-##### Adaptive-interval cloaking
+#### Adaptive-interval cloaking
+The desired degree of anonymity is specified by the parameter kmin, the minimum acceptable anonymity set size.   
+<img width="511" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/3794ad49-50d2-4ad8-bdbd-7d81b05a45a8">
 
 #### Mix zone
 No location tracking within the mix zone
