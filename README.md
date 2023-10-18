@@ -54,7 +54,7 @@ Static;Adaptive
 (3)Vital interest of the data subject
 </br>
 
-### Privacy metrics(measure the level of data protection)
+## Privacy metrics(measure the level of data protection)
 such metrics describe protection against a given type pf adversary.Different adversary types may require different metrics
 <img width="382" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/2e3aa354-510d-45b3-af6d-bb2e0dfd0461">
 
@@ -65,23 +65,33 @@ defender, attacker, all-knowing entity
 If metric depends on the ground truth,attacker may not be able to compute it;
 If metric depends on the attacker's findings, defender may not be able to compute it;
 
-#### Uncertainty of the adversary's findings Metrics
+### Uncertainty of the adversary's findings Metrics
 
-##### Anonymity set size
+#### Anonymity set size
+The anonymity set for a data subject x is the set of data subjects that the adversary cannot distinguish from x.
 the relation between anonymity set size and k-annymity:k=anonymity set size.
-##### Entropy
-the closer the entropy to  1,the higher the entropy, the more "random" the data
+#### Entropy
+Consider probabilities  
+the closer the entropy to  1,the higher the entropy, the more "random" the data  
+the entropy is highest if all values have the same probability  
 This metric is calculated by the *data holder* to understand the uncertainty of the information that may be obtained by an attacker.
 
-#### Metrics based on information gain
-##### Amount of the leaked information
-##### Relative entropy
-metrics measuring the distance between the distribution found by the adversary and the real distribution.
-Obly an *omnipotent entity* can claculate this.The ground truth of the real distribution is necessary to calculate it.
+### Metrics based on information gain
 
-#### Data similarity metrics
+
+#### Amount of the leaked information
+do not consider the sensitivity of different pieces of information.
+
+#### Relative entropy(Kullback-Leibler Divergence)
+metrics measuring the distance between the distribution found by the adversary(Q) and the real distribution(P).  
+IF P and Q are the same, the adversary was highly successful.
+Obly an *omnipotent entity* can claculate this.The ground truth of the real distribution is necessary to calculate it.
+<img width="248" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/bb79c51e-351c-491a-8079-6c8a68f361c9">
+
+</br>
+### Data similarity metrics
 metrics measuring the privacy provided by a dataset, without an explicit adversary.
-##### k-anonymity
+#### k-anonymity
 this technique based on generalization will
 reduce data availability
 </br>
