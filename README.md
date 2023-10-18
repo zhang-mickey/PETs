@@ -187,12 +187,44 @@ do we garble f?
 #### free-XOR
 For an XOR gate, no garbled table is created.
 
+## Homomorphic encryption
+Implementing MPC using HE  
+### GC with Bob having no imput can be seen as an implementation of HE
+
+### Partially homomorphic encryption
+one operation can be evaluated homomorphically
+#### RSA 
+#### Benaloh :homomorphic addition
+#### ElGamal:homomorphic multiplication
+#### Paillier:homomorphic addition
+
+### Somewhat homomorphic encryption
+Multiple operations can be evaluated homomorphically, but only a limited number of times
+#### Garbled circuits
+unbounded, but predefined number of homomorphic Boolean operations  
+Ciphertext size grows with every operation significantly  
+#### BGN
+
+#### SYY
+### Fully homomorphic encryption
+Multiple operations can be evaluated homomorphically an unlimited number of times
+#### DGHV
+Enc(m):  c = m+2r+p × q  
+Dec(c):   (c mod p) mod 2  
+Works if m+2r<p  
+c1+c2=(m1+m2)+2(r1+r2)+p(q1+q2)  
+c1*c2=( m1+2r1)(m2+2r2)+p(pq1q2+m1q2+m2q1+2r1q2+2r2q1)  
+(c1+c2) mod p= (m1+m2)+2(r1+r2)  
+c1*c2 mod p=( m1+2r1)(m2+2r2)  
+密文之和的噪音是各自密文的噪音之和；而密文乘积的噪音是噪音之积  
+
 ### Possible disclosure formats
 *Disclosing only a set of previously determined aggregates*
 *Allowing specific queries to the database*
 *Disclosing microdata*
 #### quasi-identifiers
 attributes whose values when taken together can potentially identify an individual.
+
 ### l-diversity
 <img width="339" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/893496ad-99f6-42f7-a264-3563255c478f">
 
@@ -200,6 +232,7 @@ attributes whose values when taken together can potentially identify an individu
 *Skewness attack*:l-diversity disregards the skewness of the overall distribution
 </br>
 *Similarity attack*:l-diversity disregards the semantic similarity among attribute values
+
 #### distinct l-diversity
 ensure there are at
 least l distinct values for the sensitive attribute in each
