@@ -155,8 +155,13 @@ oblivious transfer is efficient only when the function has constant size.
 <img width="645" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/0e59e3ef-7cdd-4ef8-86e2-bded8ef51cf7">
 </br>
 
-#### multiplying secret-shared 
+#### using OT to  do multiplying secret-shared 
 <img width="643" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/f885217f-fe6f-4a6b-a3ae-e77d51370eaa">
+
+#### 1-out-of -n OT
+a possible reduction to standart OT
+
+
 
 ### Goldreich-Micali-Wigderson (GMW)
 sepcial case of additive secret sharing,using(OT and Boolean sectet sharing)
