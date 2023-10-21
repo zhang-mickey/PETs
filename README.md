@@ -350,7 +350,8 @@ like
 (1)Sender  
 (2)Receiver  
 (3)time  
-(4)Number of messages
+(4)Number of messages  
+Anonymous communication aims at keeping metadata secret.
 ### protecting the sender
 `Sender-message unlinkability`: it is not noticeable who sends which message.  
 `Sender-receiver unlinkability`: it is not noticeable who sends to whom.  
@@ -402,9 +403,17 @@ formula for the expected length of the walk: 1/p
 The protocols so far achieve sender unlinkability, but not sender unobservability.  
 Dummy traffic can be added to achieve also unobservability.  
 ### DCnet
-
+Suppose, for example, that after the coin tossing, cryptographer A and B share a secret bit 1, A and C share 0
+, and B and C share 1.
 
 #### Dining cryptographers(DC) problem
+<img width="841" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/40892815-97c3-4c20-8275-1ce7f7eac018">
+</br>
+
+##### Further mechanisms to handle
+`Collisions`  : If two cryptographers paid for the dinner, their messages will cancel each other out, and the final XOR result will be 
+0.
+`Disruptions`:Any malicious cryptographer who does not want the group to communicate successfully can jam the protocol so that the final XOR result is useless, simply by sending random bits instead of the correct result of the XOR. This problem occurs because the original protocol was designed without using any public key technology and lacks reliable mechanisms to check whether participants honestly follow the protocol.
 
 ### Attacks on machine learning
 
