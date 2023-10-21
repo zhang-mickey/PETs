@@ -174,6 +174,10 @@ sepcial case of additive secret sharing,using(OT and Boolean sectet sharing)
 compute any function that can be efficiently computed.
 </br>
 For some gates, the two parties perform the same steps, for other gates ,they perform different steps.
+</br>
+<img width="453" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/6e70cd21-5fca-4c96-9636-3f90fe3942b5">
+
+</br>
 <img width="544" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/2e2751cb-70b4-4aa4-a827-a0b422463393">
 </br>
 <img width="570" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/b18b4198-fcaf-4d4a-ad22-19d9586ff6b8">
@@ -183,17 +187,19 @@ Requires interaction for each AND gate→ potentially large number of communicat
 
 
 ### Garbled circuits
-also using OT, but without using additive or Boolean secret-sharing
+also using OT, but without using additive or Boolean secret-sharing  
 </br>
-the roles of the parties are asymmetric
+the roles of the parties are asymmetric  
 </br>
-constant number of communication rounds.
+constant number of communication rounds.  
+<br>
 <img width="660" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/2ef299e9-4082-4a1c-9692-afc739f4035e">
 </br>
 <img width="644" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/64b90546-b997-44a3-b2cc-7333522ffc0e">
 </br>
 Instead of garbling a single gate, we are going to garble the whole circuit representation of f. How
 do we garble f?
+
 #### free-XOR
 For an XOR gate, no garbled table is created.
 
@@ -272,19 +278,35 @@ the distance between the two distribution should be no more than a threshold t.
 
 ## differential privacy
 ### ϵ -differential privacy
+
+### privacy budget ϵ
+Privacy hyper-parameter,indicating the maximum distance permitted between the query results for two adjacents datasets.
+`Impact on noise`  
+Smaller ϵ, higher amount of noise.
+
+### scale
+statistical dispersion of the probability distribution. In this context, the spread of the DP query results.  
+`Impact on noise`  
+The higher the scale, the higher the proability of high noise.
 #### Laplace mechanism
 <img width="535" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/576eaed0-489f-4df2-ab4d-1e97c2bc9f66">
 </br>
 
 ### sensitivity
+Sensitivity of the query,representing the maximum possible change in the query output if a subject is added, removed, or changed in the dataset.  
 <img width="570" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/f2689b48-c057-40d6-8f28-2a28cce94116">
 </br>
+`Impact on noise`  
+with ϵ being constant, higher sensitivity will lead to higher s becase s = ▲/ϵ， which means there is a high probability of high noise being added to query result. 
+
+
+
 
 #### example
 <img width="407" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/c5d6aa42-8dda-438e-86c2-cb9095765b11">
 
 
-## access control
+## Access control
 DAC(Discretionary access control)
 </br>
 MAC(Mandatory access control)
@@ -322,17 +344,55 @@ Encryption key is only stored in the CPU
 
 
 ## anonymous communication
-### Mix
-A mix collects a given number of incoming messages into a batch, then flushes them out in lexicographic order.
+Encryption can be used to protect the content of communication.  
+However, metadata remains unprotected.  
+like  
+(1)Sender  
+(2)Receiver  
+(3)time  
+(4)Number of messages
+### protecting the sender
+`Sender-message unlinkability`: it is not noticeable who sends which message.  
+`Sender-receiver unlinkability`: it is not noticeable who sends to whom.  
+`Sender unobservability`:it is not noticeable whether a potential sender sends.  
+### protection against attacks based on message length:
+`Padding`  
+### protection against attacks based on timing:
+`Artificial delays in message forwarding`
+
+### Mix(delay-tolerant)
+A mix collects a given number of incoming messages into a batch, then flushes them out in lexicographic order.  
+Thus avoiding timing-based attacks.  
 </br>
 <img width="385" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/7c397423-737e-4cf5-bcf7-47178eaf6810">
-
 </br>
 
-### onion routing
+Mix networks work well when the traffic is high  
+Appropriate for delay-tolerant applications  
+application:anonymous e-mail.  
+#### Mix selection strategies
+Selection based on reputation  
+#### Flushing strategies
+`Threshold mix`: flush when number of incoming messages is larger than a threshold  
+`Continuous mix`: flush out messages individually after a ramdom delay  
+`Pool mix`: only flush out a fraction of the batch, keep the rest for later.  
+
+### onion routing(latency- critical)
 Encryption is done in layers. Alice and server1 exchanges keys and she encrypts her message. Then, Alice and server2 exchanges keys and she encrypts again, creating layers of encryption. Alice then sends the whole layered encrypted message to Bob, and each server will only be decrypt a layer to reveal the address of the other server, which will finally lead to Bob.
 
+### Mix networks versus onion routing
+`Difference`: Mixes delay forwarding,onion routers forward immediately.  
+so mix is resistant against timing analysis.  
+onion routing is fast, allowing use in latency-critical scenarios  
+Onion routing targets lower layer in networking stack  
+In contrast, mix networks are application-specific.
+
+
+
+
 ### Random walk
+peer to peer communication  
+random selection of next node  
 the destination replies are relayed through the same nodes in reverse order.
 
 ### DCnet
@@ -347,6 +407,13 @@ the destination replies are relayed through the same nodes in reverse order.
 Aim: reconsturct training data
 #### Membership inference attack
 Train several shadow models with similar structure on similar data.
+
+### countermeasure in the training phase
+</br>
+<img width="742" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/b6b907da-338b-4ffa-b8a8-ed764b47959c">
+
+</br>
+
 ### Protecting integrity
 #### Reject on Negative Impact(RONI)
 </br>
@@ -413,6 +480,8 @@ AC = 1, AD = √2/2, BE = 2
 ```
 The Fréchet distance is the smallest of the maximum pairwise distances. In this case, both maxima are two, so the minimum of both is also 2.
 #### Dynamic time wraping
+Dynamic time warping does not require sequence pairs of the same length.
+<br>
 <img width="485" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/d3ccce9c-41b4-4e26-8c3b-19123eef3ba2">
 
 </br>
