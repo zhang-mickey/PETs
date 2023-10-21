@@ -393,9 +393,17 @@ In contrast, mix networks are application-specific.
 ### Random walk
 peer to peer communication  
 random selection of next node  
-the destination replies are relayed through the same nodes in reverse order.
+the destination replies are relayed through the same nodes in reverse order.  
+Lower p=more walking
+Higher p=risk of de-anonymization  
+formula for the expected length of the walk: 1/p
 
+### unlinkability versus unobservability
+The protocols so far achieve sender unlinkability, but not sender unobservability.  
+Dummy traffic can be added to achieve also unobservability.  
 ### DCnet
+
+
 #### Dining cryptographers(DC) problem
 
 ### Attacks on machine learning
@@ -424,6 +432,9 @@ Include adversarial samples in the training data, with the correct label
 ### DPSGD
 If the gradients are not bounded, we’ll make them so ourselves! Let C be the target bound for the maximum gradient norm. For each sample in the batch, we compute its parameter gradient and if its norm is larger than C, we clip the gradient by scaling it down to C. Mission accomplished — all the gradients now are guaranteed to have norm bounded by C, which we naturally call the clipping threshold. 
 
+### Machine learning as a Service
+#### Secure neural network inference as 2PC
+discuss the pros and cons of 2 servers performing a 2 party secure neural network inference protocol instead of server and client performing
 ## Location privacy
 ### Location perturbation
 Position d changed to a different value d'  
