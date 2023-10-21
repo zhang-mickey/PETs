@@ -1,5 +1,10 @@
 # PETs
 Data protection technology
+## possible disclosure formats
+(1)Disclosing only a set of previously determined aggregates  
+(2)Allowing specific queries to the database  
+(3)Disclosing microdata  
+
 ### CIA
 Confidentiality 
 </br>
@@ -224,9 +229,9 @@ c1*c2 mod p=( m1+2r1)(m2+2r2)
 密文之和的噪音是各自密文的噪音之和；而密文乘积的噪音是噪音之积  
 
 ### Possible disclosure formats
-*Disclosing only a set of previously determined aggregates*
-*Allowing specific queries to the database*
-*Disclosing microdata*
+`Disclosing only a set of previously determined aggregates`
+`Allowing specific queries to the database`
+`Disclosing microdata`
 #### quasi-identifiers
 attributes whose values when taken together can potentially identify an individual.
 
