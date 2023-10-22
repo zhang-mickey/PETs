@@ -101,6 +101,7 @@ This metric is calculated by the *data holder* to understand the uncertainty of 
 
 
 #### Amount of the leaked information
+Number of disclosed information items  
 do not consider the sensitivity of different pieces of information.
 
 #### Relative entropy(Kullback-Leibler Divergence)
@@ -110,6 +111,7 @@ Obly an *omnipotent entity* can claculate this.The ground truth of the real dist
 <img width="248" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/bb79c51e-351c-491a-8079-6c8a68f361c9">
 
 </br>
+
 ### Data similarity metrics
 metrics measuring the privacy provided by a dataset, without an explicit adversary.
 #### k-anonymity
@@ -122,8 +124,7 @@ reduce data availability
 <img width="335" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/6efbff02-85b7-4091-b235-537cda8bcf25">
 
 </br>
-disregards several aspects:re-release after a change
-</br>
+disregards several aspects:re-release after a change  
 can not prevent attribute disclosure
 </br>
 *attacks on k-anonymity*: 
@@ -132,13 +133,31 @@ homogeneity attack;
 </br>
 background knowledge attack
 
-#### Error-based metrics
+#### Indistinguishability metrics
+`differential privacy`  
+`Geo-indistinguishability`
+
+### metrics measuring the adversary's success
+#### Adversary's success rate
+Probability that the adversary can compromise a data record.  
+Ratio of successes for the adversary, in a large number of attempts.  
+
+
+### Error-based metrics
 metrics measuring how wrong the adversary's findings are
-##### Adversary's expected estimation error
+#### Adversary's expected estimation error
+Expected value of the distance between the ground truth and the adversary's guess
 </br>
 <img width="759" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/5443efa4-6364-4fa6-956e-6d22f88da290">
 </br>
+### Time-based metrics
+Metrics measuring the time needed by either the adversary or the defender to win.  
 
+### metrics based on accuracy/precision
+#### size of uncertainty region
+Adversary manages to narrow down the data subject's position to a region R. 
+
+### Multiplication protocol
 ### Beaver's multiplication protocol(2PC)
 Beaver triples are generated during the preprocessing phase. (Using OT,Beaver triple can be generated)
 <br>
