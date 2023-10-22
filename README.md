@@ -246,6 +246,10 @@ Requires interaction for each AND gate→ potentially large number of communicat
 also using OT, but without using additive or Boolean secret-sharing  
 the roles of the parties are asymmetric  
 constant number of communication rounds.  
+(1)Alice garbles the circuit as well as her input  
+(2)Alice sends the garbled circuit and her garbled input to Bob  
+(3)OT  
+
 <img width="660" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/2ef299e9-4082-4a1c-9692-afc739f4035e">
 </br>
 <img width="644" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/64b90546-b997-44a3-b2cc-7333522ffc0e">
@@ -253,9 +257,21 @@ constant number of communication rounds.
 Instead of garbling a single gate, we are going to garble the whole circuit representation of f. How
 do we garble f?
 
+#### point-and-permute
+Alice appends a select bit to each label:  
+For each wire w Alice choose a random bit s, she appends s and 非s to r0 and r1.
+
 #### free-XOR
 For an XOR gate, no garbled table is created.  
 Alice chooses a random number R of the same length as the labels,  
+For an XOR gate: Bob computes the output label by XORing the input labels.  
+For an AND gate: Bob determines output label from the garbled table as usual.  
+
+#### row-reduction
+Reduces the number of entries in the garbled table of an AND gate with output wire form 4 to 3.  
+
+#### Handling of NOT gates
+Not can be implement using XOR
 
 #### non-garbled outputs
 Alice uses the real values (0 or 1) as labels for the output wires.  
@@ -281,6 +297,7 @@ Ciphertext size grows with every operation significantly
 #### BGN
 
 #### SYY
+
 ### Fully homomorphic encryption
 Multiple operations can be evaluated homomorphically an unlimited number of times
 #### DGHV
