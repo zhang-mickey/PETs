@@ -353,18 +353,22 @@ the distance between the two distribution should be no more than a threshold t.
 #### Earth mover distance
 
 ## differential privacy
+Databases D1 and D2 are adjacent if they only differ in one record.  
 ### ϵ -differential privacy
 
 ### privacy budget ϵ
+ϵ >0  
 Privacy hyper-parameter,indicating the maximum distance permitted between the query results for two adjacents datasets.
 `Impact on noise`  
-Smaller ϵ, higher amount of noise.
+Smaller ϵ, higher amount of noise.  
+Higher privacy → lower ϵ  → higher error probability  
 
 ### scale
 statistical dispersion of the probability distribution. In this context, the spread of the DP query results.  
 `Impact on noise`  
 The higher the scale, the higher the proability of high noise.
 #### Laplace mechanism
+Laplace distribution with mean 0 and scale b>0  
 <img width="535" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/576eaed0-489f-4df2-ab4d-1e97c2bc9f66">
 </br>
 
@@ -373,22 +377,40 @@ Sensitivity of the query,representing the maximum possible change in the query o
 <img width="570" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/f2689b48-c057-40d6-8f28-2a28cce94116">
 </br>
 `Impact on noise`  
-with ϵ being constant, higher sensitivity will lead to higher s becase s = ▲/ϵ， which means there is a high probability of high noise being added to query result. 
+with ϵ being constant, higher sensitivity will lead to higher s becase s = ▲/ϵ， which means there is a high probability of high noise being added to query result.  
+
+▲ high → more noise is needed to achieve the same privacy → higher error probability.  
+
+why not Gaussian noise?
+Gaussian noise: gap increases linearly  
+Laplacian noise: Gap remains constant  
 
 
-
+σ
+### Approximate Differential Privacy
+<img width="295" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/8f844c44-1a0f-4bbd-ae8e-935ff0404c57">
+</br>
+ϵ-DP is special case of approximate DP with δ = 0 
+δ must be very small for DP to be useful.  
 
 #### example
 <img width="407" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/c5d6aa42-8dda-438e-86c2-cb9095765b11">
 
+## Synthetic data generation
+### GAN(nenerative adversarial network)
+
 
 ## Access control
+Users: subjects  
+Resources: objects  
+
 DAC(Discretionary access control)
 </br>
 MAC(Mandatory access control)
 </br>
-*Access control matrix*
+`Access control matrix`
 Conceptual representation,not practical as a real implementation.
+
 ### RBAC（Role-Based Access Control）
 Users can have several roles.
 ### ABAC（Attribute-Based Access Control）
@@ -585,3 +607,7 @@ Find the best matching between two discrete signal sequences
 </br>
 dynamic programming to compute DTW distance
 </br>
+
+
+Literature
+https://programming-dp.com/ch5.html  
