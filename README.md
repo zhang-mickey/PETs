@@ -227,7 +227,8 @@ sepcial case of additive secret sharing,using(OT and Boolean sectet sharing)
 </br>
 compute any function that can be efficiently computed.
 </br>
-For some gates, the two parties perform the same steps, for other gates ,they perform different steps.
+For some gates, the two parties perform the same steps, for other gates ,they perform different steps.  
+Requires interacction for each AND gate → potentially large number of communication rounds.  
 </br>
 <img width="453" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/6e70cd21-5fca-4c96-9636-3f90fe3942b5">
 
@@ -243,11 +244,8 @@ Requires interaction for each AND gate→ potentially large number of communicat
 
 ### Garbled circuits
 also using OT, but without using additive or Boolean secret-sharing  
-</br>
 the roles of the parties are asymmetric  
-</br>
 constant number of communication rounds.  
-<br>
 <img width="660" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/2ef299e9-4082-4a1c-9692-afc739f4035e">
 </br>
 <img width="644" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/64b90546-b997-44a3-b2cc-7333522ffc0e">
@@ -256,7 +254,13 @@ Instead of garbling a single gate, we are going to garble the whole circuit repr
 do we garble f?
 
 #### free-XOR
-For an XOR gate, no garbled table is created.
+For an XOR gate, no garbled table is created.  
+Alice chooses a random number R of the same length as the labels,  
+
+#### non-garbled outputs
+Alice uses the real values (0 or 1) as labels for the output wires.  
+Bob learns the result directly, without further communication.  
+Only applicable if Bob should learn the result.  
 
 ## Homomorphic encryption
 Implementing MPC using HE  
