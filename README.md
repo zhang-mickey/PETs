@@ -203,11 +203,14 @@ p2 computes (x-a) × b2+(y-b) × a2 + c2
 </br>
 
 ### Oblivious transfer
-oblivious transfer is efficient only when the function has constant size.
+oblivious transfer is efficient only when the function has constant size.  
+OT is based on asymmetric cryptography, which is costly.  
 <img width="682" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/9668a677-d6f5-448f-8587-43566a57b20c">
 </br>
 
 #### implementation using asymmetric cryptography
+Only Alice has the private key needed for decryption;  
+Encryption can be done by anyone using Alice's public key;  
 <img width="645" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/0e59e3ef-7cdd-4ef8-86e2-bded8ef51cf7">
 </br>
 
@@ -215,8 +218,8 @@ oblivious transfer is efficient only when the function has constant size.
 <img width="643" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/f885217f-fe6f-4a6b-a3ae-e77d51370eaa">
 
 #### 1-out-of -n OT
-a possible reduction to standart OT
-
+a possible reduction to standart OT  
+Alice and BOb perform n-1 standard OTs.  
 
 
 ### Goldreich-Micali-Wigderson (GMW)
@@ -236,6 +239,7 @@ For some gates, the two parties perform the same steps, for other gates ,they pe
 Requires interaction for each AND gate→ potentially large number of communication rounds.
 </br>
 
+#### Boolean circuit for the millionaires problem
 
 ### Garbled circuits
 also using OT, but without using additive or Boolean secret-sharing  
