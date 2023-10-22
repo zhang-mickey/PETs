@@ -157,11 +157,11 @@ Metrics measuring the time needed by either the adversary or the defender to win
 #### size of uncertainty region
 Adversary manages to narrow down the data subject's position to a region R. 
 
-### Multiplication protocol
+
 ### Beaver's multiplication protocol(2PC)
-Beaver triples are generated during the preprocessing phase. (Using OT,Beaver triple can be generated)
-<br>
-Beaver triplets can be used in the multiplication of secret-shared numbers.
+Beaver triples are generated during the preprocessing phase. (Using OT,Beaver triple can be generated)  
+Beaver triplets can be used in the multiplication of secret-shared numbers.  
+If a multiplication triplet is reused in further multiplications, this leaks information  
 </br>
 <img width="515" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/73fd742c-f3f3-40c8-a735-c616c7b67351">
 </br>
@@ -171,6 +171,22 @@ Beaver triplets can be used in the multiplication of secret-shared numbers.
 boolean secret sharign
 <img width="574" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/519ec6e4-ff53-4427-86db-74c4dcaaffd4">
 </br>
+### Multiplication protocol
+Assumption: a precomputed multiplication triplet
+a,b are random numbers  
+c = a × b  
+a,b,c are secret-shared: P1 has a1,b1,c1; P2 has a2,b2,c2;  
+Multiplication of secret0shared numbes x and y:
+P1 computes x1-a1;  
+P2 computes x2-a2;  
+They reconstruct x-a;  
+P1 computes y1-b1;  
+P2 computes y2-b2;  
+They reconstruct y-b;  
+x × y =(x-a+a)×(y-b+b)=(x-a)×(y-b)+(x-a) × b +(y-b) × a + c  
+one of them computes (x-a)×(y-b)  
+P1 computes (x-a) × b1+(y-b) × a1 + c1  
+p2 computes (x-a) × b2+(y-b) × a2 + c2
 
 ### shamir secrect sharing 
 
