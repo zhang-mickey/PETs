@@ -6,11 +6,11 @@ Data protection technology
 (3)Disclosing microdata  
 
 ### CIA
-Confidentiality 
+`Confidentiality` 
 </br>
-Integrity
+`Integrity`: information modification
 </br>
-Availability
+`Availability`
 
 ### The 3 meanings of privacy
 `Privacy as confidentiality`:disclosure of information is prevented,or in a way that cannot be linked back to the individual.
@@ -21,21 +21,50 @@ Availability
 (privacy as practice was not applied as users did not have information about how secure the data storage was)
 </br>
 ### A taxonomy of data privacy-4 dimensions
-Purpose: Reuse any
+'Purpose': Single, Reuse same, Reuse selected, Reuse any, Any
 </br>
-Visibility: Third Party, All
+'Visibility': Owner, Third Party, All
 </br>
-Granularity: Specific
+`Granularity`: What level of detail is made available?  
+Existential, Partial, Specific
 </br>
-Retention
+`Retention`:For how long is the data kept?
 ### Techniques to support privacy
-*Privacy design strategies*:Minimize(less data collected);Hide(encryption);Inform(Inform data subjects);Control(access control)
+`Privacy design strategies`:  
+Minimize(less data collected);Hide(encryption);Inform(Inform data subjects);Control(access control)
 </br>
-System design: Use of dummies; Anonymous&pseudonymity
-### Adversary types
+`Privacy design patterns`:during System design  
+Support the concept of` privacy by design`  
+Use of dummies; Anonymous&pseudonymity
+`Privacy-enhancing technologies`:during system development
+
+
+### GDPR
+`data subject`:natural person  
+`Personal data`:any information relating to an identified or identifiable natural person.  
+`identifiable natural person`: one who can be identified ,directly or indirectly.
+`Processing`: any operation or set of operations which is performed on personal or on sets of personal data.  
+`Controller`: natural or legal person, public authority, agency or other body which, alone or jointly with others, *determines the purposes and means of the processing of personal data*
+</br>
+`Processor`:natural or legal person, public authority, agency or other body which processes personal data on behalf of the controller.  
+GDPR does not talk about ownership of data.  
+
+#### GDPR stipulates obligations for controllers
+
+#### Possible legal bases for processing personal data
+(1) Consent of the data subject
+</br>
+(2)Necessary for the performance of a contact  
+(3)Public interest
+</br>
+(3)Vital interest of the data subject
+</br>
+
+### Adversary model
 Passive adversary ; Active adversary
 </br>
-Computationally unbbounded adversary; Computational bounded adversary
+`Computationally unbounded adversary`: information-theoretic or unconditional 
+Computational bounded adversary
 </br>
 Honest-but-curious;Malicious
 </br>
@@ -44,31 +73,18 @@ Internal;External;
 Static;Adaptive
 </br>
 
-### GDPR
-*Controller*: natural or legal person, public authority, agency or other body which, alone or jointly with others, *determines the purposes and means of the processing of personal data*
-</br>
-*Processor*:natural or legal person, public authority, agency or other body which processes personal data on behalf of the controller.
-
-#### GDPR stipulates obligations for controllers
-
-#### Possible legal bases for processing personal data
-(1) Consent of the data subject
-</br>
-(2)Public interest
-</br>
-(3)Vital interest of the data subject
-</br>
-
 ## Privacy metrics(measure the level of data protection)
+
+
 such metrics describe protection against a given type pf adversary.Different adversary types may require different metrics
 <img width="382" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/2e3aa354-510d-45b3-af6d-bb2e0dfd0461">
-
 </br>
+
 #### who can calculate the metrics
 defender, attacker, all-knowing entity
 </br>
-If metric depends on the ground truth,attacker may not be able to compute it;
-If metric depends on the attacker's findings, defender may not be able to compute it;
+If metric depends on the ground truth,attacker may not be able to compute it;  
+If metric depends on the attacker's findings, defender may not be able to compute it;  
 
 ### Uncertainty of the adversary's findings Metrics
 
