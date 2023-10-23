@@ -391,10 +391,26 @@ Laplacian noise: Gap remains constant
 <img width="295" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/8f844c44-1a0f-4bbd-ae8e-935ff0404c57">
 </br>
 ϵ-DP is special case of approximate DP with δ = 0 
+</br>
+<img width="520" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/7684a31d-0a97-43bf-94d1-3099aab144dc">
+
+</br>
 δ must be very small for DP to be useful.  
 
 #### example
 <img width="407" alt="image" src="https://github.com/zhang-mickey/PETs/assets/145342600/c5d6aa42-8dda-438e-86c2-cb9095765b11">
+
+*what would happen if we used a Laplace distribution with a non-zero mean.*  
+Bias is introduced, where the probable noisy output distribution is centered at a value other than the origina output value.  
+
+### Post-processing
+Whatever the analyst does with the obtained results, this does no increase the privacy loss.  
+
+### Group privacy
+The privacy guarantee of ϵ-DP extends also to groups of multiple individuals, although with increased privacy loss.  
+
+### Composition property of ϵ-DP
+Running multiple differentially private queries still maintains differential privacy, although with increased privacy loss.  
 
 ## Synthetic data generation
 ### GAN(nenerative adversarial network)
